@@ -11,8 +11,8 @@ public class Menu {
 	    
 		Boolean menuFlag = true;
 		String menuOption = "";
-		int num1;
-		int num2;
+		double num1;
+		double num2;
 		 
 			
 		System.out.println("Welcome to the Calculator app");
@@ -33,9 +33,9 @@ public class Menu {
 			switch (menuOption1) {
 			case "1":
 				System.out.println("Please enter first number");
-				num1 = scan.nextInt();
+				num1 = scan.nextDouble();
 				System.out.println("Please enter second number");
-				num2 = scan.nextInt();
+				num2 = scan.nextDouble();
 				scan.nextLine();
 				System.out.println("Your answer is: ");
 				System.out.println(Calculator2.add(num1, num2));
@@ -43,9 +43,9 @@ public class Menu {
 				
 			case "2":
 				System.out.println("Please enter first number");
-				num1 = scan.nextInt();
+				num1 = scan.nextDouble();
 				System.out.println("Please enter second number");
-				num2 = scan.nextInt();
+				num2 = scan.nextDouble();
 				scan.nextLine();
 				System.out.println("Your answer is: ");
 				System.out.println(Calculator2.subtract(num1, num2));
@@ -53,9 +53,9 @@ public class Menu {
 				
 			case "3":
 				System.out.println("Please enter first number");
-				num1 = scan.nextInt();
+				num1 = scan.nextDouble();
 				System.out.println("Please enter second number");
-				num2 = scan.nextInt();
+				num2 = scan.nextDouble();
 				scan.nextLine();
 				System.out.println("Your answer is: ");
 				System.out.println(Calculator2.multiply(num1, num2));
@@ -63,9 +63,9 @@ public class Menu {
 				
 			case "4":
 				System.out.println("Please enter first number");
-				num1 = scan.nextInt();
+				num1 = scan.nextDouble();
 				System.out.println("Please enter second number");
-				num2 = scan.nextInt();
+				num2 = scan.nextDouble();
 				scan.nextLine();
 				System.out.println("Your answer is: ");
 				System.out.println(Calculator2.divide(num1, num2));

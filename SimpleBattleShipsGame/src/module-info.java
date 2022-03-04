@@ -1,0 +1,2 @@
+module SimpleBattleShipsGame {
+}

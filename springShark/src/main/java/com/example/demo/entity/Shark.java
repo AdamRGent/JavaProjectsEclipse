@@ -33,14 +33,14 @@ public class Shark {
 		
 		public Shark() {}
 		
-		public Shark(@Min(2) @Max(20) int age, String name, String gender) {
+		public Shark(@Min(1) @Max(90) int age, String name, String gender) {
 			super();
 			this.age = age;
 			this.name = name;
 			this.gender = gender;
 		}
 		
-		public Shark(long id, @Min(2) @Max(20) int age, String name, String gender) {
+		public Shark(long id, @Min(1) @Max(90) int age, String name, String gender) {
 			super();
 			this.id = id;
 			this.age = age;

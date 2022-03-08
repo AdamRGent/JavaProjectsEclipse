@@ -23,7 +23,6 @@ public class Shark {
 		@Max(90)
 		private int age;
 		
-		//name must be unique, and can NOT be null
 		@Column(unique = true, nullable = false)
 		private String name;
 		

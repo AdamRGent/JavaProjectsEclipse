@@ -29,7 +29,7 @@ private SharkService service;
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<Shark> createDuck(@RequestBody Shark shark){
+	public ResponseEntity<Shark> createShark(@RequestBody Shark shark){
 		return new ResponseEntity<Shark>(this.service.create(shark), HttpStatus.CREATED);
 	}
 	

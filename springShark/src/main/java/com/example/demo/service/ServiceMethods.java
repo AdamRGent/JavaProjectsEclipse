@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ServiceMethods <T> {
 
-		T create(T duck);
+		T create(T dog);
 		
 		List<T> readAll();
 		

@@ -11,7 +11,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
 @Entity
-public class Dog {
+public class Shark {
 
 
 		@Id
@@ -19,8 +19,8 @@ public class Dog {
 		private long id;
 		
 		@Column
-		@Min(2)
-		@Max(20)
+		@Min(1)
+		@Max(90)
 		private int age;
 		
 		//name must be unique, and can NOT be null
@@ -31,16 +31,16 @@ public class Dog {
 		@Column
 		private String gender;
 		
-		public Dog() {}
+		public Shark() {}
 		
-		public Dog(@Min(2) @Max(20) int age, String name, String gender) {
+		public Shark(@Min(2) @Max(20) int age, String name, String gender) {
 			super();
 			this.age = age;
 			this.name = name;
 			this.gender = gender;
 		}
 		
-		public Dog(long id, @Min(2) @Max(20) int age, String name, String gender) {
+		public Shark(long id, @Min(2) @Max(20) int age, String name, String gender) {
 			super();
 			this.id = id;
 			this.age = age;
@@ -99,7 +99,7 @@ public class Dog {
 				return false;
 			if (getClass() != obj.getClass())
 				return false;
-			Dog other = (Dog) obj;
+			Shark other = (Shark) obj;
 			return age == other.age && Objects.equals(gender, other.gender)
 					&& id == other.id && Objects.equals(name, other.name);
 	

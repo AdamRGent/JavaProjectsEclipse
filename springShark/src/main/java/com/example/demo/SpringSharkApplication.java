@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringDogApplication {
+public class SpringSharkApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDogApplication.class, args);
+		SpringApplication.run(SpringSharkApplication.class, args);
 	}
 
 }

@@ -13,40 +13,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Dog;
-import com.example.demo.service.DogService;
+import com.example.demo.entity.Shark;
+import com.example.demo.service.SharkService;
 
 @RestController
-@RequestMapping("/dog")
+@RequestMapping("/shark")
 
 
-public class DogController {
+public class SharkController {
 
-private DogService service;
+private SharkService service;
 	
-	private DogController(DogService service) {
+	private SharkController(SharkService service) {
 		this.service = service;
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<Dog> createDuck(@RequestBody Dog dog){
-		return new ResponseEntity<Dog>(this.service.create(dog), HttpStatus.CREATED);
+	public ResponseEntity<Shark> createDuck(@RequestBody Shark shark){
+		return new ResponseEntity<Shark>(this.service.create(shark), HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/readAll")
-	public ResponseEntity<List<Dog>> readAllDogs(){
-		return new ResponseEntity<List<Dog>>(this.service.readAll(), HttpStatus.OK);
+	public ResponseEntity<List<Shark>> readAllsharks(){
+		return new ResponseEntity<List<Shark>>(this.service.readAll(), HttpStatus.OK);
 	}
 	
 	
 	@GetMapping("/readById/{id}")
-	public ResponseEntity<Dog> readById(@PathVariable long id){
-		return new ResponseEntity<Dog>(this.service.readById(id), HttpStatus.OK);
+	public ResponseEntity<Shark> readById(@PathVariable long id){
+		return new ResponseEntity<Shark>(this.service.readById(id), HttpStatus.OK);
 	}
 	
 	@PutMapping("/update/{id}")
-	public ResponseEntity<Dog> updateDuck(@PathVariable long id, @RequestBody Dog dog){
-		return new ResponseEntity<Dog>(this.service.update(id, dog), HttpStatus.ACCEPTED);
+	public ResponseEntity<Shark> updateDuck(@PathVariable long id, @RequestBody Shark shark){
+		return new ResponseEntity<Shark>(this.service.update(id, shark), HttpStatus.ACCEPTED);
 	}
 	
 	

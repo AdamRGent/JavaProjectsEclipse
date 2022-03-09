@@ -26,7 +26,6 @@ public class Shark {
 		@Column(unique = true, nullable = false)
 		private String name;
 		
-		
 		@Column
 		private String gender;
 		

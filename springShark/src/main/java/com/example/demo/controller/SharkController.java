@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,9 +25,12 @@ public class SharkController {
 
 private SharkService service;
 	
-	private SharkController(SharkService service) {
-		this.service = service;
-	}
+
+@Autowired 
+public SharkController(SharkService service) {
+this.service = service;
+}
+	
 	
 	@PostMapping("/create")
 	public ResponseEntity<Shark> createShark(@RequestBody Shark shark){

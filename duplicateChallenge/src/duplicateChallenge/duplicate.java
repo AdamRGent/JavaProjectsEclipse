@@ -42,8 +42,8 @@ public class duplicate {
 	    }
 
 	    int count = 0;
-	    for(int repatCount : repeatationMap.values()){
-	        if(repatCount > 1) {
+	    for(int repeatCount : repeatationMap.values()){
+	        if(repeatCount > 1) {
 	            count++;
 	        }
 	    }

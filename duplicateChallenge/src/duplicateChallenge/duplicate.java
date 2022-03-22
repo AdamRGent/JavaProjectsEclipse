@@ -13,7 +13,6 @@ public class duplicate {
 	public static void main(String[] args) {
 		
 		List<String> input1 = new ArrayList<>();
-		Map<String,Integer> hm = new HashMap();
 		
 		input1.add("A");
 		input1.add("a");

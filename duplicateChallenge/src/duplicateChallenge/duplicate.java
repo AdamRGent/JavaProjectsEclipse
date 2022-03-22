@@ -28,30 +28,26 @@ public class duplicate {
 		input1.add("!");
 		for(String s: input1){
 		System.out.println(s + " " + Collections.frequency(input1, s));
-			}
-		int size = input1.size();
-		
+			}		
 
-		
-		Set<String> hashSet = new HashSet<>();
-    
-		hashSet.add("A");
-		hashSet.add("a");
-		hashSet.add("s");
-		hashSet.add("d");
-		hashSet.add("e");
-		hashSet.add("f");
-		hashSet.add("s");
-		hashSet.add("g");
-		hashSet.add("h");
-		hashSet.add("!");
-		hashSet.add("!");
-		hashSet.add("!");
-		int size1 = hashSet.size();
-		
-		int duplicate = size - size1;
-		System.out.println("The number of duplicate values is: " + duplicate);
-		}
+		Map<String,Integer> repeatationMap= new HashMap<String,Integer>();
+	    for(String str : input1){
 
+	        if(repeatationMap.containsKey(str)) {
+	            repeatationMap.put(str,repeatationMap.get(str) + 1);
+	        }
+	        else {
+	            repeatationMap.put(str, 1);
+	        }
+	    }
+
+	    int count = 0;
+	    for(int repatCount : repeatationMap.values()){
+	        if(repatCount > 1) {
+	            count++;
+	        }
+	    }
+	    System.out.println("Number of Strings repeated : " + count);
+}
 }
 
